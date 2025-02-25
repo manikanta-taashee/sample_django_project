@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block heading %} Dashboard {% endblock %}
+{% block header %} Dashboard {% endblock %}
+{% block content %}
+    <h2>Welcome {{ user.username }}</h2>
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+            <th scope="col">ID</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Username</th>
+            <th scope="col">Email</th>
+            <th scope="col">User Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for each in users_list %}
+                <tr>
+                    <th scope="row">{{ each.id }}</th>
+                    <td>{{ each.first_name }}</td>
+                    <td>{{ each.last_name }}</td>
+                    <td>{{ each.username }}</td>
+                    <td>{{ each.email }}</td>
+                    <td>{{ each.is_superuser }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

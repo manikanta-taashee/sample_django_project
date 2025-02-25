@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block heading %} Dashboard {% endblock %}
+{% block header %} Dashboard {% endblock %}
+{% block content %}
+    <h2>Welcome {{ user.username }}</h2>
+    <h3>Your User Details:</h3>
+    <p></p>
+    <h4>User ID: {{ user.id }}</h4>
+    <h4>Username: {{ user.username }}</h4>
+    <h4>First Name: {{ user.first_name }}</h4>
+    <h4>Last Name: {{ user.last_name }}</h4>
+    <h4>Email: {{ user.email }}</h4>
+    <h4>Is Admin: {{ user.is_superuser }}</h4>
+{% endblock %}
